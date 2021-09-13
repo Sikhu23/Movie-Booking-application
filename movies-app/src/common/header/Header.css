@@ -9,10 +9,6 @@
 
 
 
-/* It should rotate infinitely with a complete cycle of 8 seconds, and the speed curve of the animation should be linear.
-
-It should be on the left of the header. */
-
 .App-logo{
     background-color:#ff7f7f;
     height:35px;
