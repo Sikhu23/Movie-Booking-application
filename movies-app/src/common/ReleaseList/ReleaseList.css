@@ -1,0 +1,23 @@
+.flex-container{
+    width:100%;
+}
+
+
+
+
+.img1{
+    width: 100px;
+
+}
+
+.left{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25% ;
+    
+    
+    
+    height: 100%;
+    
+    width: 76%;
+    margin: 16px;
+}
