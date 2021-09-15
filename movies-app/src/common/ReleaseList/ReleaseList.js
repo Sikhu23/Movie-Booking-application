@@ -43,7 +43,7 @@ export default function TitlebarImageList(props) {
           <ImageList>
             <ImageListItem
               key={item.poster_url}
-              style={{ height: "350", width: "350", margin: "16px" }}
+              style={{ height: "350",width:'200px', margin: "16px" }}
             >
               <img src={item.poster_url} alt={item.title} />
               <ImageListItemBar
@@ -54,6 +54,13 @@ export default function TitlebarImageList(props) {
           </ImageList>
         ))}
       </div>
+      <div className="right">
+        <form>
+         
+        </form>
+      </div>
+    
+    
     </div>
   );
 }
