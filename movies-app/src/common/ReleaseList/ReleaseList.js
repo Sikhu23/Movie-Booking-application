@@ -5,6 +5,7 @@ import ImageListItem from "@material-ui/core/ImageListItem";
 import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 // import ListSubheader from '@material-ui/core/ListSubheader';
 import "./../ReleaseList/ReleaseList.css";
+import SimpleCard from "../Card/Card";
 
 // import moviesData from '../moviesData/moviesData';
 
@@ -20,7 +21,8 @@ import "./../ReleaseList/ReleaseList.css";
  * The example data is structured as follows:
  *
  * import image from 'path/to/image.jpg';
- * [etc...]
+ * import SimpleCard from './../Card/Card';
+[etc...]
  *
  * const itemData = [
  *   {
@@ -43,21 +45,20 @@ export default function TitlebarImageList(props) {
           <ImageList>
             <ImageListItem
               key={item.poster_url}
-              style={{ height: "350",width:'200px', margin: "16px" }}
+              style={{ height: "350",width:'200px', margin: "16px" ,cursor:'pointer'}}
             >
               <img src={item.poster_url} alt={item.title} />
               <ImageListItemBar
                 title={item.title}
-                subtitle={<span>by: {item.author}</span>}
+                
+                subtitle={<span>Release Date: {item.release_date}</span>}
               />
             </ImageListItem>
           </ImageList>
         ))}
       </div>
       <div className="right">
-        <form>
-         
-        </form>
+        <SimpleCard></SimpleCard>
       </div>
     
     

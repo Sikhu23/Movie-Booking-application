@@ -16,12 +16,12 @@
     
     width: 24%;
     margin: 16px;
-    border: 2px solid black;
+    
 
 }
 
 .left{
-    border: 2px solid black;
+    
     display: grid;
     grid-template-columns: 25% 25% 25% 25% ;
     
