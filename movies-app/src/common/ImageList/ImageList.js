@@ -57,6 +57,7 @@ export default function SingleLineImageList(props) {
           <ImageListItem key={item.poster_url} style={{height:250,width:250}}>
             <img src={item.poster_url} alt={item.title} />
             <ImageListItemBar
+            key={item.poster_url} 
               
               title={item.title}
               classes={{

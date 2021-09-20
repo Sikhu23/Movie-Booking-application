@@ -6,6 +6,7 @@ import moviesData from "../../common/moviesData/moviesData";
 // import { ImageListItemBar } from "@material-ui/core";
 import SingleLineImageList from '../../common/ImageList/ImageList';
 import TitlebarImageList from '../../common/ReleaseList/ReleaseList';
+// import { BrowserRouter } from "react-router-dom";
 
 export default class Home extends Component{
     render(){
@@ -13,11 +14,17 @@ export default class Home extends Component{
         return(
 
             <div>
+                
                 <Header/>
                 <span className="heading">Upcoming Movies</span>
                 
                 <SingleLineImageList itemData={moviesData}></SingleLineImageList>
-                <TitlebarImageList  itemData={moviesData}></TitlebarImageList>
+                <TitlebarImageList  itemData={moviesData}
+                
+                
+                
+                ></TitlebarImageList>
+               
 
             </div>
 

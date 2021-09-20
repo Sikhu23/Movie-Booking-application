@@ -5,7 +5,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { Checkbox, FormControl, FormHelperText,FormControlLabel, Input, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
+import { Checkbox, FormControl,FormControlLabel, Input, InputLabel, MenuItem, Select, TextField } from '@material-ui/core';
 import genres from '../Genre/genre'; 
 import artists from '../Artists/artists';
 
@@ -13,16 +13,16 @@ const useStyles = makeStyles((theme) => ({
     root: {
         maxWidth:240,
         minWidth:240,
-        margin:theme.spacing.unit,
-        padding:theme.spacing.unit,
+        margin:theme.spacing(),
+        padding:theme.spacing(),
         
         
       
     },
     root1: {
        
-        margin:theme.spacing.unit,
-        padding:theme.spacing.unit,
+        margin:theme.spacing(),
+        padding:theme.spacing(),
         
         
       
@@ -30,16 +30,21 @@ const useStyles = makeStyles((theme) => ({
     
     component: {
       color:theme.palette.primary.light,
-      margin:theme.spacing.unit,
+      margin:theme.spacing(),
     },
     regular: {
-        margin:theme.spacing.unit,
+        margin:theme.spacing(),
     },
   }));
   
 export default function SimpleCard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
+  
+//   const [Name, setName] = useState([]);
+
+    // const handleChange = (event) => {
+    //     setName(event.target.value);
+    // };
 
   return (
     <Card className={classes.root}>
@@ -47,7 +52,7 @@ export default function SimpleCard() {
         <Typography className={classes.component}>
             FIND MOVIES BY:
         </Typography>
-        <Typography >
+        
         <FormControl fullWidth className={classes.regular} >
             
             <InputLabel htmlFor="my-input">Movie Name</InputLabel>
@@ -57,9 +62,9 @@ export default function SimpleCard() {
 
         <FormControl  fullWidth className={classes.regular}>
         <InputLabel>Genre</InputLabel>
-            <Select >
+            <Select  >
                 
-                {genres.map(genre=>{return(<MenuItem value={genre.id}>
+                {genres.map(genre=>{return(<MenuItem key={genre.id} >
                     <FormControlLabel control={<Checkbox  />} label={genre.name} />
                 </MenuItem>)})}
             </Select>
@@ -67,9 +72,9 @@ export default function SimpleCard() {
 
         <FormControl  fullWidth className={classes.regular}>
         <InputLabel >Artist</InputLabel>
-            <Select >
+            <Select  >
                 
-                {artists.map(genre=>{return(<MenuItem value={genre.id}>
+                {artists.map(genre=>{return(<MenuItem  key={genre.id} >
                     
                     <FormControlLabel control={<Checkbox  />} label={genre.first_name + genre.last_name} />
                     </MenuItem>)})}
@@ -113,7 +118,7 @@ export default function SimpleCard() {
         
         
         
-        </Typography>
+       
         
 
 

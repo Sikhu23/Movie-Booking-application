@@ -6,6 +6,11 @@ import ImageListItemBar from "@material-ui/core/ImageListItemBar";
 // import ListSubheader from '@material-ui/core/ListSubheader';
 import "./../ReleaseList/ReleaseList.css";
 import SimpleCard from "../Card/Card";
+import { Link } from "react-router-dom";
+// import { Route } from "react-router";
+// import Details from "../../screens/details/details";
+// import { BrowserRouter } from "react-router-dom";
+// import Home from "../../screens/home/Home";
 
 // import moviesData from '../moviesData/moviesData';
 
@@ -41,22 +46,47 @@ export default function TitlebarImageList(props) {
   return (
     <div className="flex-container">
       <div className="left">
+     
         {props.itemData.map((item) => (
-          <ImageList>
+          
+          
+          <ImageList key={item.poster_url}>
+             
             <ImageListItem
               key={item.poster_url}
               style={{ height: "350",width:'200px', margin: "16px" ,cursor:'pointer'}}
             >
-              <img src={item.poster_url} alt={item.title} />
+             
+              <Link to = "/details"><img src={item.poster_url} alt={item.title} /></Link>
+              
+             
               <ImageListItemBar
+              key={item.poster_url}
                 title={item.title}
                 
                 subtitle={<span>Release Date: {item.release_date}</span>}
               />
+             
             </ImageListItem>
+            
           </ImageList>
+         
+          
         ))}
+       
+
+
+
+      
+      
+        
+
+        
+        
+         
+    
       </div>
+      
       <div className="right">
         <SimpleCard></SimpleCard>
       </div>
